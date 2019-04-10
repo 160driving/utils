@@ -78,4 +78,6 @@ const merge = (obj, other) => {
   }, clone(obj));
 };
 
-export { deepFindKey, setPath, getPath, mapKeys, mapValues, deepMapKeys };
+const isObjEmpty = (obj = {}) => !Object.keys(obj).length;
+
+export { deepFindKey, setPath, getPath, mapKeys, mapValues, deepMapKeys, isObjEmpty };

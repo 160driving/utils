@@ -388,7 +388,7 @@ exports.chunk = chunk;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.deepMapKeys = exports.mapValues = exports.mapKeys = exports.getPath = exports.setPath = exports.deepFindKey = undefined;
+exports.isObjEmpty = exports.deepMapKeys = exports.mapValues = exports.mapKeys = exports.getPath = exports.setPath = exports.deepFindKey = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -510,12 +510,18 @@ var merge = function merge(obj, other) {
   }, (0, _common.clone)(obj));
 };
 
+var isObjEmpty = function isObjEmpty() {
+  var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  return !Object.keys(obj).length;
+};
+
 exports.deepFindKey = deepFindKey;
 exports.setPath = setPath;
 exports.getPath = getPath;
 exports.mapKeys = mapKeys;
 exports.mapValues = mapValues;
 exports.deepMapKeys = deepMapKeys;
+exports.isObjEmpty = isObjEmpty;
 
 /***/ }),
 /* 6 */
