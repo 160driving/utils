@@ -60,7 +60,7 @@ Methods applied on this categories
 | typeCheck | fn, array(array of types expected for each parameter of the **fn**, string(pipe)optional) | function or throws an error|
 | decodeQs | searchUrl = '' | object with the query strings|
 | getQs | obj | string on the format of query string |
-| changeRoute |{origin: sting, pathname: string} | go to new _\*\*path_ |
+| changeRoute |{origin: sting, pathname: string} | go to new **path** |
 | snakeToCamelCase | string | transformed string |
 | camelToSnakeCase | string | transformed string |
 | objToCamelCase | object | transformed object to camelcase key |
