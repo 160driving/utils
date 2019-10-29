@@ -5,7 +5,7 @@ Utils has some methods to make your life easier.
 ## Usage
 
 ```bash
-import { range } from 'utils';
+import { uniq } from 'utils';
 ```
 
 ## Methods
@@ -34,3 +34,34 @@ Methods applied on this categories
 | merge        | `object`(required), `other`,                                                            | new object                                                            |
 | isObjEmpty   | `object`(by default empty)                                                              | boolean                                                               |
 | stripNullObj | `object`(by default empty)                                                              | new object with all the values                                        |
+
+**String**
+| Name | Params | Return value |
+| ----- | ------------------------------------ | ----------------------------------- |
+| capitalize | string | **String** with the first letter Capitalized |
+
+**Type**
+| Name | Params | Return value |
+| ----- | ------------------------------------ | ----------------------------------- |
+| isObj (checks for inheritance) | value | Boolean |
+| isPlainObj | value | Boolean |
+| isUndefined | value | Boolean |
+| isArray | value | Boolean |
+| isString | value | Boolean |
+| isNumber | value | Boolean |
+
+**Others**
+| Name | Params | Return value |
+| ----- | ------------------------------------ | ----------------------------------- |
+| clone | data | identical copy of **data** |
+| genId | | random number |
+| compose | ...fns(array of functions) | returns the value that is applied to each of the **functions** |
+| range | { from: number, to: number } | array between **from** and **to** |
+| typeCheck | fn, array(array of types expected for each parameter of the **fn**, string(pipe)optional) | function or throws an error|
+| decodeQs | searchUrl = '' | object with the query strings|
+| getQs | obj | string on the format of query string |
+| changeRoute |{origin: sting, pathname: string} | go to new _\*\*path_ |
+| snakeToCamelCase | string | transformed string |
+| camelToSnakeCase | string | transformed string |
+| objToCamelCase | object | transformed object to camelcase key |
+| objToSnakeCase | object | transformed object to snakecase key |
