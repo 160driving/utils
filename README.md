@@ -23,14 +23,14 @@ Methods applied on this categories
 
 **Objects**
 
-| Name         | Params                                                                                  | Return value                       |
-| ------------ | --------------------------------------------------------------------------------------- | ---------------------------------- |
-| deepFindKey  | `object`(required), `key`(required)                                                     | return object that has the **key** |
-| setPath      | `object`(by default is an empty object), `path`(by default is an empty string), `value` |                                    |
-| getPath      | `object`(by default is an empty object), `path`(by default is an empty string),         |                                    |
-| mapKeys      | `object`(required), `function ()`,                                                      |                                    |
-| mapValues    | `object`(required), `function ()`,                                                      |                                    |
-| deepMapKeys  | `object`(required), `function ()`,                                                      |                                    |
-| merge        | `object`(required), `other`,                                                            |                                    |
-| isObjEmpty   | `object`(by default empty)                                                              |                                    |
-| stripNullObj | `object`(by default empty)                                                              |                                    |
+| Name         | Params                                                                                  | Return value                                                          |
+| ------------ | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| deepFindKey  | `object`(required), `key`(required)                                                     | return object that has the **key**                                    |
+| setPath      | `object`(by default is an empty object), `path`(by default is an empty string), `value` | new object with new value with the **path** on the **object**         |
+| getPath      | `object`(by default is an empty object), `path`(by default is an empty string),         | value of the **path** on the **object**                               |
+| mapKeys      | `object`(required), `function ()`,                                                      | new object with the applied function to all the keys                  |
+| mapValues    | `object`(required), `function ()`,                                                      | new object with the applied function to all the values                |
+| deepMapKeys  | `object`(required), `function ()`,                                                      | new object with the applied function to all the keys (nested objects) |
+| merge        | `object`(required), `other`,                                                            | new object                                                            |
+| isObjEmpty   | `object`(by default empty)                                                              | boolean                                                               |
+| stripNullObj | `object`(by default empty)                                                              | new object with all the values                                        |
