@@ -21,14 +21,14 @@ import { uniq } from 'utils';
 Methods applied on this categories
 ```
 
-### Arrays
+#### Arrays
 
 | Name  | Params                                                                                             | Return value                        |
 | ----- | -------------------------------------------------------------------------------------------------- | ----------------------------------- |
 | uniq  | `array`(required), `field`( required, field that you want to check if is unique in the items list) | new set of array with unique values |
 | chunk | `array`(required), `size`(required number)                                                         | new array with the new **size**     |
 
-### Objects
+#### Objects
 
 | Name         | Params                                                                                  | Return value                                                          |
 | ------------ | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
@@ -42,13 +42,13 @@ Methods applied on this categories
 | isObjEmpty   | `object`(by default empty)                                                              | boolean                                                               |
 | stripNullObj | `object`(by default empty)                                                              | new object with all the values                                        |
 
-### String
+#### String
 
 | Name       | Params | Return value                                 |
 | ---------- | ------ | -------------------------------------------- |
 | capitalize | string | **String** with the first letter Capitalized |
 
-### Type
+#### Type
 
 | Name                           | Params | Return value |
 | ------------------------------ | ------ | ------------ |
@@ -59,7 +59,7 @@ Methods applied on this categories
 | isString                       | value  | Boolean      |
 | isNumber                       | value  | Boolean      |
 
-### Others
+#### Others
 
 | Name             | Params                                                                                    | Return value                                                   |
 | ---------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
