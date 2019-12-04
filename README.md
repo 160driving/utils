@@ -75,3 +75,4 @@ Methods applied on this categories
 | camelToSnakeCase | string                                                                                    | transformed string                                             |
 | objToCamelCase   | object                                                                                    | transformed object to camelcase key                            |
 | objToSnakeCase   | object                                                                                    | transformed object to snakecase key                            |
+| debounce   | func, waiting time, immediate(boolean)                                                                                    |                           |
