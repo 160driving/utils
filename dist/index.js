@@ -124,7 +124,7 @@ exports.isNumber = isNumber;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.objToSnakeCase = exports.objToCamelCase = exports.camelToSnakeCase = exports.snakeToCamelCase = exports.changeRoute = exports.getQs = exports.decodeQs = exports.typeCheck = exports.range = exports.compose = exports.genId = exports.clone = undefined;
+exports.debounce = exports.objToSnakeCase = exports.objToCamelCase = exports.camelToSnakeCase = exports.snakeToCamelCase = exports.changeRoute = exports.getQs = exports.decodeQs = exports.typeCheck = exports.range = exports.compose = exports.genId = exports.clone = undefined;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -257,6 +257,30 @@ var objToSnakeCase = function objToSnakeCase(obj) {
   });
 };
 
+var debounce = function debounce(func, wait, immediate) {
+  var timeout = void 0;
+
+  return function () {
+    var context = this;
+    var args = arguments;
+    var callNow = immediate && !timeout;
+
+    var later = function later() {
+      timeout = null;
+      if (!immediate) {
+        func.apply(context, args);
+      }
+    };
+
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+
+    if (callNow) {
+      func.apply(context, args);
+    }
+  };
+};
+
 exports.clone = clone;
 exports.genId = genId;
 exports.compose = compose;
@@ -269,6 +293,7 @@ exports.snakeToCamelCase = snakeToCamelCase;
 exports.camelToSnakeCase = camelToSnakeCase;
 exports.objToCamelCase = objToCamelCase;
 exports.objToSnakeCase = objToSnakeCase;
+exports.debounce = debounce;
 
 /***/ }),
 /* 2 */
